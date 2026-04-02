@@ -1,24 +1,19 @@
 # Ex.No:2(A) CLASS AND OBJECT
 
 ## QUESTION:
-Create a class Person with attributes name and age. Write a method greet() that prints: Hello, my name is <name> and I am <age> years old.
+Define a class Teacher with attributes: name (String), subject (String), and experience (int, years). 
 
-import java.util.Scanner;
 
 
 ## AIM:
-To write a Java program that demonstrates the concept of Class and Object using a Person class with attributes and a method.
-
+To define a Java class Teacher with attributes name, subject, and experience.
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	Create a class named Person with attributes name and age.
-4. Define a method greet() that prints the message using the attributes.
-5. In the main() method, create an object of the Person class.
-6. Read the name and age values from the user.
-7. Call the greet() method using the object.
-8. End the program.
+1.	Create a class named Teacher.
+2.	Declare attributes name, subject, and experience.
+3.	Define a constructor to initialize these attributes.
+4.	Add a method displayDetails() to print teacher details.
+5.	End the program.
 
 
 
@@ -27,10 +22,9 @@ To write a Java program that demonstrates the concept of Class and Object using 
 ## PROGRAM:
  ```
 /*
-Program to implement a Class and Objects using Java
-Developed by: MADHUMITHA R R
-RegisterNumber:212224240083
-
+Program to implement variables and Operators using Java
+Developed by: PRASANNAR R
+RegisterNumber: 212222040120
 */
 ```
 
@@ -38,32 +32,27 @@ RegisterNumber:212224240083
 ```
 import java.util.Scanner;
 
-class prog {
+class Teacher {
     String name;
-    int age;
+    String subject;
+    int experience;
 
-    prog(String name, int age) {
-        this.name = name;
-        this.age = age;
+    void printMessage() {
+        System.out.print("Mr. " + name + " teaches " + subject + " and has " + experience + " years experience.");
     }
+}
 
-    void greet() 
-    {
-        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
-    }
-
+class prog {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-       
-        String name = scanner.nextLine(); 
-        int age = scanner.nextInt();      
+        Scanner sc = new Scanner(System.in);
 
-        prog person = new prog(name, age); 
-        person.greet(); 
+        Teacher t = new Teacher();
+        t.name = sc.nextLine();
+        t.subject = sc.nextLine();
+        t.experience = sc.nextInt();
 
+        t.printMessage();
     }
-
-
 }
 
 ```
@@ -73,11 +62,13 @@ class prog {
 
 
 ## OUTPUT:
+<img width="1242" height="426" alt="image" src="https://github.com/user-attachments/assets/46eae97c-9961-4dff-8ce5-ba60ddcf24f6" />
 
-![Screenshot 2025-11-16 212511](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/f4678ded3f5d700b48ed69952ea8e2696ab06d80/19AI307_JAVA(25-26)/Module-02/DAY-1/Screenshot%202025-11-16%20212511.png)
 
 
 ## RESULT:
+The Teacher class is successfully defined with the required attributes and methods.
 
-Thus, the Java program to implement a Class and Object using a Person class was successfully executed and verified.
+
+
 
